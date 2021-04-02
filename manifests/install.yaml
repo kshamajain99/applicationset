@@ -1426,7 +1426,7 @@ metadata:
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
   name: argocd-applicationset-controller
-  namespace: argocd
+  namespace: dev-deploy-argocd-usw2-ppd-ppd
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -1436,7 +1436,7 @@ metadata:
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
   name: argocd-applicationset-controller
-  namespace: argocd
+  namespace: dev-deploy-argocd-usw2-ppd-ppd
 rules:
 - apiGroups:
   - argoproj.io
@@ -1500,7 +1500,7 @@ metadata:
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
   name: argocd-applicationset-controller
-  namespace: argocd
+  namespace: dev-deploy-argocd-usw2-ppd-ppd
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -1508,7 +1508,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: argocd-applicationset-controller
-  namespace: argocd
+  namespace: dev-deploy-argocd-usw2-ppd-ppd
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -1518,7 +1518,7 @@ metadata:
     app.kubernetes.io/name: argocd-applicationset-controller
     app.kubernetes.io/part-of: argocd-applicationset
   name: argocd-applicationset-controller
-  namespace: argocd
+  namespace: dev-deploy-argocd-usw2-ppd-ppd
 spec:
   selector:
     matchLabels:
